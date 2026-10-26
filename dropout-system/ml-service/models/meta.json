@@ -1,0 +1,575 @@
+{
+  "trainedAt": "2026-10-09T14:59:30.656190+00:00",
+  "dataset": {
+    "file": "data.csv",
+    "rows": 4424,
+    "classDistribution": {
+      "Graduate": 2209,
+      "Dropout": 1421,
+      "Enrolled": 794
+    }
+  },
+  "features": [
+    "marital_status",
+    "application_mode",
+    "application_order",
+    "course",
+    "daytime_evening_attendance",
+    "previous_qualification",
+    "previous_qualification_grade",
+    "nacionality",
+    "mother_s_qualification",
+    "father_s_qualification",
+    "mother_s_occupation",
+    "father_s_occupation",
+    "admission_grade",
+    "displaced",
+    "educational_special_needs",
+    "debtor",
+    "tuition_fees_up_to_date",
+    "gender",
+    "scholarship_holder",
+    "age_at_enrollment",
+    "international",
+    "curricular_units_1st_sem_credited",
+    "curricular_units_1st_sem_enrolled",
+    "curricular_units_1st_sem_evaluations",
+    "curricular_units_1st_sem_approved",
+    "curricular_units_1st_sem_grade",
+    "curricular_units_1st_sem_without_evaluations",
+    "curricular_units_2nd_sem_credited",
+    "curricular_units_2nd_sem_enrolled",
+    "curricular_units_2nd_sem_evaluations",
+    "curricular_units_2nd_sem_approved",
+    "curricular_units_2nd_sem_grade",
+    "curricular_units_2nd_sem_without_evaluations",
+    "unemployment_rate",
+    "inflation_rate",
+    "gdp"
+  ],
+  "labels": {
+    "marital_status": "Marital status",
+    "application_mode": "Application mode",
+    "application_order": "Application order",
+    "course": "Course",
+    "daytime_evening_attendance": "Daytime/evening attendance",
+    "previous_qualification": "Previous qualification",
+    "previous_qualification_grade": "Previous qualification (grade)",
+    "nacionality": "Nacionality",
+    "mother_s_qualification": "Mother's qualification",
+    "father_s_qualification": "Father's qualification",
+    "mother_s_occupation": "Mother's occupation",
+    "father_s_occupation": "Father's occupation",
+    "admission_grade": "Admission grade",
+    "displaced": "Displaced",
+    "educational_special_needs": "Educational special needs",
+    "debtor": "Debtor",
+    "tuition_fees_up_to_date": "Tuition fees up to date",
+    "gender": "Gender",
+    "scholarship_holder": "Scholarship holder",
+    "age_at_enrollment": "Age at enrollment",
+    "international": "International",
+    "curricular_units_1st_sem_credited": "Curricular units 1st sem (credited)",
+    "curricular_units_1st_sem_enrolled": "Curricular units 1st sem (enrolled)",
+    "curricular_units_1st_sem_evaluations": "Curricular units 1st sem (evaluations)",
+    "curricular_units_1st_sem_approved": "Curricular units 1st sem (approved)",
+    "curricular_units_1st_sem_grade": "Curricular units 1st sem (grade)",
+    "curricular_units_1st_sem_without_evaluations": "Curricular units 1st sem (without evaluations)",
+    "curricular_units_2nd_sem_credited": "Curricular units 2nd sem (credited)",
+    "curricular_units_2nd_sem_enrolled": "Curricular units 2nd sem (enrolled)",
+    "curricular_units_2nd_sem_evaluations": "Curricular units 2nd sem (evaluations)",
+    "curricular_units_2nd_sem_approved": "Curricular units 2nd sem (approved)",
+    "curricular_units_2nd_sem_grade": "Curricular units 2nd sem (grade)",
+    "curricular_units_2nd_sem_without_evaluations": "Curricular units 2nd sem (without evaluations)",
+    "unemployment_rate": "Unemployment rate",
+    "inflation_rate": "Inflation rate",
+    "gdp": "GDP",
+    "target": "Target"
+  },
+  "schema": [
+    {
+      "key": "marital_status",
+      "label": "Marital status",
+      "min": 1.0,
+      "max": 6.0,
+      "mean": 1.1786,
+      "isInteger": true,
+      "isBinary": false,
+      "nUnique": 6
+    },
+    {
+      "key": "application_mode",
+      "label": "Application mode",
+      "min": 1.0,
+      "max": 57.0,
+      "mean": 18.6691,
+      "isInteger": true,
+      "isBinary": false,
+      "nUnique": 18
+    },
+    {
+      "key": "application_order",
+      "label": "Application order",
+      "min": 0.0,
+      "max": 9.0,
+      "mean": 1.7278,
+      "isInteger": true,
+      "isBinary": false,
+      "nUnique": 8
+    },
+    {
+      "key": "course",
+      "label": "Course",
+      "min": 33.0,
+      "max": 9991.0,
+      "mean": 8856.6426,
+      "isInteger": true,
+      "isBinary": false,
+      "nUnique": 17
+    },
+    {
+      "key": "daytime_evening_attendance",
+      "label": "Daytime/evening attendance",
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.8908,
+      "isInteger": true,
+      "isBinary": true,
+      "nUnique": 2
+    },
+    {
+      "key": "previous_qualification",
+      "label": "Previous qualification",
+      "min": 1.0,
+      "max": 43.0,
+      "mean": 4.5778,
+      "isInteger": true,
+      "isBinary": false,
+      "nUnique": 17
+    },
+    {
+      "key": "previous_qualification_grade",
+      "label": "Previous qualification (grade)",
+      "min": 95.0,
+      "max": 190.0,
+      "mean": 132.6133,
+      "isInteger": false,
+      "isBinary": false,
+      "nUnique": 101
+    },
+    {
+      "key": "nacionality",
+      "label": "Nacionality",
+      "min": 1.0,
+      "max": 109.0,
+      "mean": 1.8732,
+      "isInteger": true,
+      "isBinary": false,
+      "nUnique": 21
+    },
+    {
+      "key": "mother_s_qualification",
+      "label": "Mother's qualification",
+      "min": 1.0,
+      "max": 44.0,
+      "mean": 19.5619,
+      "isInteger": true,
+      "isBinary": false,
+      "nUnique": 29
+    },
+    {
+      "key": "father_s_qualification",
+      "label": "Father's qualification",
+      "min": 1.0,
+      "max": 44.0,
+      "mean": 22.2753,
+      "isInteger": true,
+      "isBinary": false,
+      "nUnique": 34
+    },
+    {
+      "key": "mother_s_occupation",
+      "label": "Mother's occupation",
+      "min": 0.0,
+      "max": 194.0,
+      "mean": 10.9609,
+      "isInteger": true,
+      "isBinary": false,
+      "nUnique": 32
+    },
+    {
+      "key": "father_s_occupation",
+      "label": "Father's occupation",
+      "min": 0.0,
+      "max": 195.0,
+      "mean": 11.0323,
+      "isInteger": true,
+      "isBinary": false,
+      "nUnique": 46
+    },
+    {
+      "key": "admission_grade",
+      "label": "Admission grade",
+      "min": 95.0,
+      "max": 190.0,
+      "mean": 126.9781,
+      "isInteger": false,
+      "isBinary": false,
+      "nUnique": 620
+    },
+    {
+      "key": "displaced",
+      "label": "Displaced",
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.5484,
+      "isInteger": true,
+      "isBinary": true,
+      "nUnique": 2
+    },
+    {
+      "key": "educational_special_needs",
+      "label": "Educational special needs",
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.0115,
+      "isInteger": true,
+      "isBinary": true,
+      "nUnique": 2
+    },
+    {
+      "key": "debtor",
+      "label": "Debtor",
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.1137,
+      "isInteger": true,
+      "isBinary": true,
+      "nUnique": 2
+    },
+    {
+      "key": "tuition_fees_up_to_date",
+      "label": "Tuition fees up to date",
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.8807,
+      "isInteger": true,
+      "isBinary": true,
+      "nUnique": 2
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.3517,
+      "isInteger": true,
+      "isBinary": true,
+      "nUnique": 2
+    },
+    {
+      "key": "scholarship_holder",
+      "label": "Scholarship holder",
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.2484,
+      "isInteger": true,
+      "isBinary": true,
+      "nUnique": 2
+    },
+    {
+      "key": "age_at_enrollment",
+      "label": "Age at enrollment",
+      "min": 17.0,
+      "max": 70.0,
+      "mean": 23.2651,
+      "isInteger": true,
+      "isBinary": false,
+      "nUnique": 46
+    },
+    {
+      "key": "international",
+      "label": "International",
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.0249,
+      "isInteger": true,
+      "isBinary": true,
+      "nUnique": 2
+    },
+    {
+      "key": "curricular_units_1st_sem_credited",
+      "label": "Curricular units 1st sem (credited)",
+      "min": 0.0,
+      "max": 20.0,
+      "mean": 0.71,
+      "isInteger": true,
+      "isBinary": false,
+      "nUnique": 21
+    },
+    {
+      "key": "curricular_units_1st_sem_enrolled",
+      "label": "Curricular units 1st sem (enrolled)",
+      "min": 0.0,
+      "max": 26.0,
+      "mean": 6.2706,
+      "isInteger": true,
+      "isBinary": false,
+      "nUnique": 23
+    },
+    {
+      "key": "curricular_units_1st_sem_evaluations",
+      "label": "Curricular units 1st sem (evaluations)",
+      "min": 0.0,
+      "max": 45.0,
+      "mean": 8.2991,
+      "isInteger": true,
+      "isBinary": false,
+      "nUnique": 35
+    },
+    {
+      "key": "curricular_units_1st_sem_approved",
+      "label": "Curricular units 1st sem (approved)",
+      "min": 0.0,
+      "max": 26.0,
+      "mean": 4.7066,
+      "isInteger": true,
+      "isBinary": false,
+      "nUnique": 23
+    },
+    {
+      "key": "curricular_units_1st_sem_grade",
+      "label": "Curricular units 1st sem (grade)",
+      "min": 0.0,
+      "max": 18.875,
+      "mean": 10.6408,
+      "isInteger": false,
+      "isBinary": false,
+      "nUnique": 805
+    },
+    {
+      "key": "curricular_units_1st_sem_without_evaluations",
+      "label": "Curricular units 1st sem (without evaluations)",
+      "min": 0.0,
+      "max": 12.0,
+      "mean": 0.1377,
+      "isInteger": true,
+      "isBinary": false,
+      "nUnique": 11
+    },
+    {
+      "key": "curricular_units_2nd_sem_credited",
+      "label": "Curricular units 2nd sem (credited)",
+      "min": 0.0,
+      "max": 19.0,
+      "mean": 0.5418,
+      "isInteger": true,
+      "isBinary": false,
+      "nUnique": 19
+    },
+    {
+      "key": "curricular_units_2nd_sem_enrolled",
+      "label": "Curricular units 2nd sem (enrolled)",
+      "min": 0.0,
+      "max": 23.0,
+      "mean": 6.2321,
+      "isInteger": true,
+      "isBinary": false,
+      "nUnique": 22
+    },
+    {
+      "key": "curricular_units_2nd_sem_evaluations",
+      "label": "Curricular units 2nd sem (evaluations)",
+      "min": 0.0,
+      "max": 33.0,
+      "mean": 8.0633,
+      "isInteger": true,
+      "isBinary": false,
+      "nUnique": 30
+    },
+    {
+      "key": "curricular_units_2nd_sem_approved",
+      "label": "Curricular units 2nd sem (approved)",
+      "min": 0.0,
+      "max": 20.0,
+      "mean": 4.4358,
+      "isInteger": true,
+      "isBinary": false,
+      "nUnique": 20
+    },
+    {
+      "key": "curricular_units_2nd_sem_grade",
+      "label": "Curricular units 2nd sem (grade)",
+      "min": 0.0,
+      "max": 18.571428571428573,
+      "mean": 10.2302,
+      "isInteger": false,
+      "isBinary": false,
+      "nUnique": 786
+    },
+    {
+      "key": "curricular_units_2nd_sem_without_evaluations",
+      "label": "Curricular units 2nd sem (without evaluations)",
+      "min": 0.0,
+      "max": 12.0,
+      "mean": 0.1503,
+      "isInteger": true,
+      "isBinary": false,
+      "nUnique": 10
+    },
+    {
+      "key": "unemployment_rate",
+      "label": "Unemployment rate",
+      "min": 7.6,
+      "max": 16.2,
+      "mean": 11.5661,
+      "isInteger": false,
+      "isBinary": false,
+      "nUnique": 10
+    },
+    {
+      "key": "inflation_rate",
+      "label": "Inflation rate",
+      "min": -0.8,
+      "max": 3.7,
+      "mean": 1.228,
+      "isInteger": false,
+      "isBinary": false,
+      "nUnique": 9
+    },
+    {
+      "key": "gdp",
+      "label": "GDP",
+      "min": -4.06,
+      "max": 3.51,
+      "mean": 0.002,
+      "isInteger": false,
+      "isBinary": false,
+      "nUnique": 10
+    }
+  ],
+  "classes": [
+    "Dropout",
+    "Enrolled",
+    "Graduate"
+  ],
+  "dropoutIndex": 0,
+  "metrics": {
+    "random_forest": {
+      "accuracy": 0.7593,
+      "macro_f1": 0.7126,
+      "weighted_f1": 0.763
+    },
+    "xgboost": {
+      "accuracy": 0.7492,
+      "macro_f1": 0.7061,
+      "weighted_f1": 0.7552
+    },
+    "ann": {
+      "accuracy": 0.7153,
+      "macro_f1": 0.6429,
+      "weighted_f1": 0.7129
+    },
+    "ensemble": {
+      "accuracy": 0.7605,
+      "macro_f1": 0.707,
+      "weighted_f1": 0.7607
+    }
+  },
+  "confusionMatrix": [
+    [
+      209,
+      41,
+      34
+    ],
+    [
+      34,
+      82,
+      43
+    ],
+    [
+      17,
+      43,
+      382
+    ]
+  ],
+  "testRows": 885,
+  "ensemble": "equal-weight soft voting (mean of probabilities)",
+  "rfTopImportances": [
+    {
+      "feature": "curricular_units_2nd_sem_approved",
+      "label": "Curricular units 2nd sem (approved)",
+      "importance": 0.119
+    },
+    {
+      "feature": "curricular_units_2nd_sem_grade",
+      "label": "Curricular units 2nd sem (grade)",
+      "importance": 0.0955
+    },
+    {
+      "feature": "curricular_units_1st_sem_approved",
+      "label": "Curricular units 1st sem (approved)",
+      "importance": 0.0735
+    },
+    {
+      "feature": "curricular_units_1st_sem_grade",
+      "label": "Curricular units 1st sem (grade)",
+      "importance": 0.0634
+    },
+    {
+      "feature": "admission_grade",
+      "label": "Admission grade",
+      "importance": 0.0475
+    },
+    {
+      "feature": "curricular_units_2nd_sem_evaluations",
+      "label": "Curricular units 2nd sem (evaluations)",
+      "importance": 0.046
+    },
+    {
+      "feature": "previous_qualification_grade",
+      "label": "Previous qualification (grade)",
+      "importance": 0.0422
+    },
+    {
+      "feature": "age_at_enrollment",
+      "label": "Age at enrollment",
+      "importance": 0.0416
+    },
+    {
+      "feature": "curricular_units_1st_sem_evaluations",
+      "label": "Curricular units 1st sem (evaluations)",
+      "importance": 0.0404
+    },
+    {
+      "feature": "tuition_fees_up_to_date",
+      "label": "Tuition fees up to date",
+      "importance": 0.0401
+    },
+    {
+      "feature": "course",
+      "label": "Course",
+      "importance": 0.0344
+    },
+    {
+      "feature": "father_s_occupation",
+      "label": "Father's occupation",
+      "importance": 0.0338
+    },
+    {
+      "feature": "mother_s_occupation",
+      "label": "Mother's occupation",
+      "importance": 0.0305
+    },
+    {
+      "feature": "gdp",
+      "label": "GDP",
+      "importance": 0.0274
+    },
+    {
+      "feature": "unemployment_rate",
+      "label": "Unemployment rate",
+      "importance": 0.0252
+    }
+  ]
+}

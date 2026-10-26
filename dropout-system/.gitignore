@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.env
+__pycache__/
+.venv/
+ml-service/models/*.joblib
+ml-service/data/*.csv
