@@ -148,3 +148,13 @@ GitHub: [KANUSHKASELVARAJ](https://github.com/KANUSHKASELVARAJ)
 ---
 
 *Retention Desk — supporting early intervention through data-driven insights.*
+---
+
+## 🎥 Project Demo & Pitch Deck
+
+- **📊 Pitch Deck (Presentation):** [View Retention Desk PPT](https://docs.google.com/presentation/d/1ToRHrm7xd05Ui3fTjxHoY2E7gXsdTgks/edit?usp=drivesdk&ouid=106007719117192523764&rtpof=true&sd=true)
+- **🎬 Project Demo Video:** [Watch Retention Desk Demo](https://drive.google.com/file/d/1hJM9WN0qWXJM4bJCaXBY8NzuJs2441ha/view?usp=drivesdk)
+- **💻 Source Code:** [GitHub Repository](https://github.com/KANUSHKASELVARAJ/retention-desk)
+
+*Retention Desk — supporting early intervention through data-driven insights.*
+
