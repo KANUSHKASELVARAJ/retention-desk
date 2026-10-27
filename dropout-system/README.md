@@ -1,159 +1,150 @@
-# Retention Desk 🎓
+# Retention Desk
 ### AI-Powered Student Dropout Prediction & Intervention System
 
-Retention Desk is an AI-powered decision-support system designed to help educational institutions identify students who may be at risk of dropping out. It provides a centralized dashboard for student risk analysis, machine learning predictions, counseling alerts, and student support planning.
+## 📌 Overview
 
-## Problem Statement
+Retention Desk is an AI-powered student support system designed to help educational institutions identify students who may be at risk of dropping out.
 
-Educational institutions may struggle to identify students at risk of dropping out when student data must be analyzed manually. Delayed identification can make it harder for faculty to prioritize counseling and academic support.
+The system analyzes student academic and related information to predict risk levels and helps faculty take early action through counseling alerts, mentor notifications, and support plans.
 
-Retention Desk aims to address this challenge through machine learning, interactive dashboards, and organized intervention workflows.
+## 🎯 Problem Statement
 
-## Features
+Educational institutions may struggle to identify students who need academic support early enough. Manual monitoring can delay intervention and make it difficult for faculty to prioritize students who need assistance.
 
-- Faculty authentication
-- Student dashboard and data visualization
-- Machine-learning-based student outcome predictions
-- Student risk analysis
-- Counseling alerts
-- Student support-plan management
+Retention Desk aims to support early identification and organized follow-up using machine learning and a centralized dashboard.
 
-## Technology Stack
+## 💡 Key Features
+
+- **Student Risk Prediction:** Predicts student outcomes using a machine learning model.
+- **Faculty Dashboard:** Provides a centralized view of student risk information.
+- **Risk Monitoring:** Helps faculty identify students who may need additional support.
+- **Counseling Alerts:** Supports follow-up for at-risk students.
+- **Mentor Notifications:** Helps organize student support activities.
+- **Support Plans:** Assists faculty in planning interventions.
+- **Authentication:** Provides protected access to the faculty/admin interface.
+
+## 🛠️ Technology Stack
 
 | Component | Technology |
 |---|---|
-| Frontend | React, Vite |
-| Visualization | Recharts |
+| Frontend | React, Vite, Recharts |
 | Backend | Node.js, Express.js |
 | Database | MongoDB Atlas, Mongoose |
+| Machine Learning Service | Python, Flask |
 | Authentication | JWT, bcryptjs |
-| ML Service | Python, Flask |
-| ML Models | Random Forest, XGBoost, Artificial Neural Network |
+| Machine Learning | Random Forest, XGBoost, Artificial Neural Network |
 
-## System Architecture
+## 🧠 Dataset
 
-```text
-Faculty
-   |
-   v
-React + Vite Frontend
-   |
-   v
-Node.js + Express Backend
-   |                 |
-   v                 v
-MongoDB Atlas     Flask ML Service
-                       |
-                       v
-                Risk Predictions
-```
+The project uses the UCI Machine Learning Repository dataset **Predict Students' Dropout and Academic Success**.
 
-## Dataset
+The dataset contains approximately 4,424 student records and supports three outcome categories:
 
-The project uses the UCI Machine Learning Repository dataset, *Predict Students' Dropout and Academic Success*.
+- Dropout
+- Enrolled
+- Graduate
 
-- Dataset source: https://archive.ics.uci.edu/dataset/697/predict+students+dropout+and+academic+success
-- Approximate dataset size: 4,424 student records.
-- Target outcomes: Dropout, Enrolled, and Graduate.
+The trained models use student-related features to estimate outcomes. Predictions are intended to support faculty decisions, not replace human judgment.
 
-## Getting Started
+## 🏗️ System Architecture
+
+1. Faculty accesses the React frontend.
+2. The frontend sends requests to the Node.js/Express backend.
+3. The backend handles authentication and database operations using MongoDB.
+4. Prediction requests are forwarded to the Python/Flask machine learning service.
+5. The prediction results are returned to the application for display.
+
+## 🔐 Demo Login Credentials
+
+These credentials are intended **only for project demonstration and evaluation**. They are not the original production/admin credentials.
+
+- **Demo Email:** `admin@school.edu`
+- **Demo Password:** `ChangeMe123!`
+
+**Important:** These credentials work only if the corresponding demo account has been created in the deployed application's database and has the correct role and permissions. Please test the login before sharing the application with evaluators.
+
+Use a restricted demo account containing no sensitive student or personal information. If this README is public, use a disposable demo account and rotate its password after evaluation.
+
+## 🚀 Live Demo
+
+**Application URL:** `YOUR_DEPLOYED_FRONTEND_URL`
+
+Replace the placeholder above with your actual deployed frontend URL.
+
+## ⚙️ Local Setup
 
 ### Prerequisites
 
 - Node.js and npm
 - Python
+- MongoDB Atlas account or a local MongoDB instance
 - Git
-- MongoDB Atlas account or a compatible MongoDB instance
 
-### Clone the repository
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/KANUSHKASELVARAJ/retention-desk.git
 cd retention-desk
 ```
 
-### Configure environment variables
+### 2. Configure environment variables
 
-Create the environment files required by your frontend and backend.
+Create the required `.env` files for the frontend, backend, and machine learning service according to the environment variables used in the source code.
 
-Example backend configuration:
+Typical configuration may include:
 
-```env
-PORT=5000
-MONGODB_URI=your_mongodb_connection_string
-JWT_SECRET=your_secure_random_secret
-ML_SERVICE_URL=http://127.0.0.1:5001
-```
+- MongoDB connection string
+- JWT secret
+- Backend API URL
+- Machine learning service URL
 
-Example frontend configuration for Vite:
+Use your actual variable names from the code. **Never commit `.env` files, database credentials, JWT secrets, or other private keys.**
 
-```env
-VITE_API_URL=http://localhost:5000
-```
+### 3. Install dependencies and start services
 
-These variable names and ports are examples. Use the actual configuration expected by your code. Never commit real credentials or `.env` files.
+Open separate terminals and follow the commands for the actual project folders.
 
-### Install dependencies
-
-Install Node.js dependencies in the frontend and backend directories:
+For a Node.js service:
 
 ```bash
 npm install
-```
-
-Install Python dependencies in the ML service directory:
-
-```bash
-pip install -r requirements.txt
-```
-
-Run these commands from the directories containing the corresponding dependency files.
-
-### Run the application
-
-Start the Flask ML service, Node.js backend, and React frontend in separate terminals using the commands configured in each component.
-
-For example:
-
-```bash
-python app.py
-```
-
-```bash
 npm run dev
 ```
 
-Check the actual entry-point filename and `package.json` scripts before running these commands.
+For the Python machine learning service, activate the project's virtual environment, install its requirements, and run the Flask application using the entry point specified in the source code.
 
-Open the frontend URL printed in your terminal. Vite commonly uses `http://localhost:5173`.
+Refer to the project's deployment guide for the exact commands and service URLs.
 
-See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed local setup and production deployment instructions.
+## ☁️ Deployment
 
-## Deployment
+The application can be deployed using separate hosting services for the frontend, backend, and machine learning service, with MongoDB Atlas for database hosting.
 
-The application can be deployed using separate services for the frontend, backend, and ML service, with MongoDB Atlas as the hosted database.
+See [DEPLOYMENT.md](DEPLOYMENT.md) for deployment instructions.
 
-Production deployment requires correct API URLs, environment variables, CORS configuration, and secure database access.
+Before deployment, verify that all API URLs, CORS settings, environment variables, and database permissions are configured correctly.
 
-## Security and Responsible Use
+## 🔮 Future Enhancements
 
-- Protect credentials and student data.
-- Restrict access to authorized users.
-- Treat predictions as estimates rather than definitive judgments.
-- Evaluate model performance and potential bias before operational use.
-- Use predictions to support, not replace, faculty judgment.
+- Improved model evaluation and explainability
+- Automated follow-up reminders
+- More detailed student progress reports
+- Additional intervention tracking
+- Model monitoring and periodic retraining
 
-## Future Enhancements
+## ⚠️ Responsible Use
 
-- Improved model explainability
-- Intervention outcome tracking
-- Automated follow-up notifications
-- Model monitoring and performance reporting
+Predictions are estimates and may contain errors or bias. They should not be used as the sole basis for decisions about students. Faculty should review relevant context and use predictions as one input when deciding what support to offer.
 
-## Repository
-
-GitHub: https://github.com/KANUSHKASELVARAJ/retention-desk
-
-## License
+## 📄 License
 
 This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+
+## 👩‍💻 Author
+
+**Kanushka Selvaraj**
+
+GitHub: [KANUSHKASELVARAJ](https://github.com/KANUSHKASELVARAJ)
+
+---
+
+*Retention Desk — supporting early intervention through data-driven insights.*
